@@ -3,7 +3,7 @@ const app = express();
 const port = process.env.PORT || 80;
 
 app.get('/', (req,res)=>{
-  res.send('App is running...');
+  res.send('App is running in docker container...');
 });
 
 app.listen(port, () => {
