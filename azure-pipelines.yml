@@ -10,7 +10,7 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 variables:
-  imageName: 'docker-test:$(build.buildId)'
+  imageName: 'docker-test:latest'
 
 steps:
   - script: docker build -t RCGLabACR.azurecr.io/$(imageName) .
