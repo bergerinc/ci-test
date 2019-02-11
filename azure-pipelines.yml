@@ -13,5 +13,6 @@ variables:
   imageName: 'docker-test:$(build.buildId)'
 
 steps:
-- script: docker build -f Dockerfile -t $(imageName) .
-  displayName: 'docker build'
+  - script: docker build -t RCGLabACR.azurecr.io/$(imageName) .
+  - script: docker login -u RCGLabACR -p FhrhyRug25e031=Nfqcmti9TdGu10hs2 RCGLabACR.azurecr.io
+  - script: docker push RCGLabACR.azurecr.io/$(imageName)
