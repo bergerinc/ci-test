@@ -10,9 +10,9 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 variables:
-  imageName: 'docker-test:v1'
+  imageName: 'azure-test:v1'
 
 steps:
-  - script: docker build -t RCGLabACR.azurecr.io/$(imageName) .
-  - script: docker login -u RCGLabACR -p FhrhyRug25e031=Nfqcmti9TdGu10hs2 RCGLabACR.azurecr.io
-  - script: docker push RCGLabACR.azurecr.io/$(imageName)
+  - script: docker build -t bergerinc/$(imageName) .
+  - script: docker login -u bergerinc -p 24nono55 bergerinc
+  - script: docker push bergerinc/$(imageName)
