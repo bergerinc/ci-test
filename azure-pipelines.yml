@@ -13,6 +13,6 @@ variables:
   imageName: 'azure-test:v1'
 
 steps:
-  - script: docker build -t https://cloud.docker.com/repository/docker/bergerinc/$(imageName) .
+  - script: docker build -t $(imageName) .
   - script: docker login -u bergerinc -p 24nono55 https://cloud.docker.com/repository/docker/bergerinc
   - script: docker push https://cloud.docker.com/repository/docker/bergerinc/$(imageName)
