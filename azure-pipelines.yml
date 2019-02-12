@@ -15,4 +15,4 @@ variables:
 steps:
   - script: docker build -t $(imageName) .
   - script: docker login -u RCGLabACR -p FhrhyRug25e031=Nfqcmti9TdGu10hs2 RCGLabACR.azurecr.io
-  - script: docker push $(imageName)
+  - script: docker push rcglabacr.azurecr.io/$(imageName)
